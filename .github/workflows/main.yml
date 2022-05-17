@@ -6,13 +6,13 @@ on:
       - master
 
 jobs:
-  build:
+  dagger:
 
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout 
-      - uses: actions/checkout@v3
+      - 
+        name: Checkout 
+        uses: actions/checkout@v3
       - 
         name: Dagger for GitHub
         uses: dagger/dagger-for-github@v3.0.0
@@ -21,14 +21,14 @@ jobs:
             project update
             do test
 
-      - name: Setup NodeJs
-        uses: actions/setup-node@v1
-        with:
-          # for mac m1
-          node-version: '16.7.0'
+      # - name: Setup NodeJs
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     # for mac m1
+      #     node-version: '16.7.0'
 
-      - name: Install Dependencies
-        run: npm install
+      # - name: Install Dependencies
+      #   run: npm install
         
-      - name: Run Jest Tests
-        run : npm run test
+      # - name: Run Jest Tests
+      #   run : npm run test
