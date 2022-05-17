@@ -11,6 +11,13 @@ npm install next@canary
 - create jest.config.js
 - add swcMinify: false, in next.config.js
 - add .vscode
+- add babelrc
+
+# Test
+```sh
+npm run test
+```
+
 # Get started
 ```
 npm run dev
