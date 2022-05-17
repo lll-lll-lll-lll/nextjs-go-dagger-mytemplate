@@ -21,15 +21,3 @@ jobs:
           cmds: |
             project update
             do test
-
-      # - name: Setup NodeJs
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     # for mac m1
-      #     node-version: '16.7.0'
-
-      # - name: Install Dependencies
-      #   run: npm install
-        
-      # - name: Run Jest Tests
-      #   run : npm run test
