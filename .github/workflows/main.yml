@@ -11,7 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout 
+      - uses: actions/checkout@v3
+      - 
+        name: Dagger for GitHub
+        uses: dagger/dagger-for-github@v3.0.0
+        with:
+          cmds: |
+            project update
+            do test
+
       - name: Setup NodeJs
         uses: actions/setup-node@v1
         with:
