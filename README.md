@@ -28,13 +28,16 @@ npm run dev
 
 
 ## dager CI
-※ dagger installed
+※ dagger installed<br>
+
+create cue.mod directory. initialize dagger settings
 ```sh
 dagger project init
 ```
 ```sh
 dagger project update
 ```
+execute CI
 ```sh
 dagger do build
 ```
