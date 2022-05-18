@@ -17,11 +17,6 @@ npm install next@canary
 
 ## push and Github Actions succeed
 
-## Get started
-```sh
-npm run dev
-```
-
 
 
 # dagger settings
