@@ -9,9 +9,10 @@ npm install next@canary
 ```
 # Config something ...
 - create jest.config.js
-- add swcMinify: false, in next.config.js
+- add swcMinify: false in next.config.js
 - add .vscode
-- add babelrc
+- add .babelrc
+- add CI file
 
 # Test
 ```sh
