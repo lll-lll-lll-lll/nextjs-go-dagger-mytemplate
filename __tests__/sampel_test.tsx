@@ -1,4 +1,4 @@
-import { Sample } from "@/pages/sample";
+import  Sample  from "@/pages/sample";
 import { render, screen } from "@testing-library/react";
 import React from 'react'
 
