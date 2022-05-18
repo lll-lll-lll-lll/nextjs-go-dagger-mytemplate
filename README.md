@@ -10,10 +10,6 @@ npm install next@canary
 - add .babelrc
 - add CI file
 
-## Test
-```sh
-npm run test
-```
 
 ## Get started
 ```sh
@@ -31,7 +27,8 @@ npm run dev
 ## dager CI
 ※ dagger installed<br>
 
-create cue.mod directory. initialize dagger settings. if you already have cue.mod directory, not execute `dagger project init`, just ``` dagger project update```
+create cue.mod directory. initialize dagger settings. <br>
+if you already have cue.mod directory, not execute `dagger project init`, just ``` dagger project update```
 ```sh
 dagger project init
 ```
