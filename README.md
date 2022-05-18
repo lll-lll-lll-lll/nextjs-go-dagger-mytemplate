@@ -23,12 +23,18 @@ npm run dev
 
 # dagger settings
 - install dagger: https://docs.dagger.io/1200/local-dev
-- add /cue.mod
 - add next_jest.cue
 - modify CI file(/.github/workflow/main.yml)
 
 
 ## dager CI
+※ dagger installed
+```sh
+dagger project init
+```
+```sh
+dagger project update
+```
 ```sh
 dagger do build
 ```
