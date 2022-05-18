@@ -15,6 +15,7 @@ npm install next@canary
 - add .babelrc
 - add CI file
 
+## push and Github Actions succeed
 
 ## Get started
 ```sh
