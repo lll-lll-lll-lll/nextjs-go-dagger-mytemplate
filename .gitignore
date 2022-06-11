@@ -37,4 +37,6 @@ yarn-error.log*
 
 # dagger
 _build
-/cue.mod
+cue.mod/
+
+

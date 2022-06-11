@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - master
-      - dagger-version
 
 jobs:
   dagger:
-
     runs-on: ubuntu-latest
     steps:
       - 

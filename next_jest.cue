@@ -18,7 +18,6 @@ dagger.#Plan & {
         }
     }
 
-    // 
     client: {
         filesystem: {
             "./": read: {
