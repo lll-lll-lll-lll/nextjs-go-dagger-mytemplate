@@ -1,4 +1,4 @@
-import  Sample  from "@/pages/sample";
+import  Home  from "@/pages/index";
 import { render, screen } from "@testing-library/react";
 import React from 'react'
 
@@ -14,8 +14,8 @@ jest.mock('next/head', () => {
 
 describe('first test', () => {
     test('github actions jest test', async () => {
-        render(<Sample />)
+        render(<Home />)
         // screen.debug()
-        await expect(document.title).toBe('Test')
+        await expect(document.title).toBe('Create Next App')
     })
 })

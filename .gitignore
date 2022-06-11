@@ -2,7 +2,7 @@
 package-lock.json
 yarn.lock
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
@@ -36,7 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 
 # dagger
-_build
+_build/
 cue.mod/
 
 
