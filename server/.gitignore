@@ -1,3 +1,5 @@
 # goLandが作成するディレクトリ
 .idea/
 .env
+
+cue.mod/

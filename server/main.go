@@ -19,6 +19,7 @@ func main() {
 
 	log.Print("starting server...")
 	router := gin.Default()
+	router.GET("/", HelloWorld)
 	router.GET("/albums", getAlbums)
 	router.POST("/albums", postAlbums)
 	router.GET("/albums/:id", getAlibumByID)
@@ -58,4 +59,8 @@ func getAlibumByID(c *gin.Context) {
 		}
 	}
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Album not found"})
+}
+
+func HelloWorld(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, gin.H{"message":"hello world"})
 }
