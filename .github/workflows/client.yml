@@ -1,4 +1,4 @@
-name: CI
+name: Client Dagger CI
 
 on:
   push:
@@ -17,6 +17,7 @@ jobs:
         name: Dagger for GitHub
         uses: dagger/dagger-for-github@v3.0.0
         with:
+          workdir: ./client
           cmds: |
             project update
             do test
