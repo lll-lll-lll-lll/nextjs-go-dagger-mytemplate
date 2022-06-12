@@ -1,13 +1,27 @@
 version: '3'
 
 services:
+  client:
+    container_name: ec_client
+    build:
+      context: ./client
+      dockerfile: next.Dockerfile
+    tty: true
+    volumes:
+      - ./:/usr/src/app 
+    command: sh -c "cd client && yarn run start"
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+
   server:
-    container_name: go_server
+    container_name: ec_server
     build:
       context: ./server
       dockerfile: go.Dockerfile
     volumes:
-      - ./:/go/src
+      - ./server/:/go/src
     tty: true
     ports:
       - 80:8080
