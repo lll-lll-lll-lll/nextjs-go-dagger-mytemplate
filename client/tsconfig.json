@@ -27,11 +27,11 @@
     }
   },
   "include": [
-    "next-env.d.ts",
+    "client/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "client/__tests__/node_modules"
   ]
 }
