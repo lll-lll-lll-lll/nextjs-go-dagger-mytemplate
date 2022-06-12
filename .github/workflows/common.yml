@@ -1,4 +1,4 @@
-name: Client Dagger CI
+name: Client and Server Dagger CI
 
 on:
   push:
