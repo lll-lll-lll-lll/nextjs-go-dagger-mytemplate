@@ -62,5 +62,5 @@ func getAlibumByID(c *gin.Context) {
 }
 
 func HelloWorld(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, gin.H{"message":"hello world"})
+	c.JSON(http.StatusOK, gin.H{"message":"helloworld"})
 }
