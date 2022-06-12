@@ -1,7 +1,9 @@
 ## push and Github Actions succeed
 
+
+
 ## dager CI
-※ dagger installed<br>
+※ dagger already installed<br>
 
 create cue.mod directory. initialize dagger settings. <br>
 if you already have cue.mod directory, not execute `dagger project init`, just ``` dagger project update```
