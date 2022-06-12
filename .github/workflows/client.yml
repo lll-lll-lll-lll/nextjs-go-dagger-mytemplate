@@ -19,5 +19,6 @@ jobs:
         with:
           workdir: ./client
           cmds: |
+            project init
             project update
             do test
