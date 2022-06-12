@@ -38,3 +38,10 @@ jobs:
             project init
             project update
             do test
+  
+  test-deploy:
+    needs: [dagger-client-ci, dagger-server-ci]
+    runs-on: ubuntu-latest
+    steps:
+      - name: test Deploy
+      run: echo Test Deploy
