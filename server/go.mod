@@ -3,6 +3,7 @@ module github.com/go_template
 go 1.18
 
 require (
+	github.com/aws/aws-lambda-go v1.32.0
 	github.com/gin-gonic/gin v1.8.1
 	github.com/go-playground/assert/v2 v2.0.1
 )

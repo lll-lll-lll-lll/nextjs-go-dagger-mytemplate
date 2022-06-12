@@ -2,6 +2,9 @@
 FROM golang:1.17-buster as builder
 
 WORKDIR /server
+RUN apt-get -y update 
+RUN apt-get install -y make
+
 
 # Retrieve application dependencies.
 # This allows the container build to reuse cached dependencies.
