@@ -17,3 +17,12 @@ execute CI
 ```sh
 dagger do build
 ```
+
+
+## Azure Functions
+- trigger directory
+- function.json
+- host.json
+- .funcignore
+- local.settings.json
+- .gitignore
