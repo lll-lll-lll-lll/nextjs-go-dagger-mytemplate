@@ -28,17 +28,16 @@ services:
   db:
     container_name: ec_db
     platform: linux/x86_64 
-    image: mysql
+    image: postgres:11-alpine
     restart: always
     ports:
-      - "13306:3306"
+      - '5433:5432'
     volumes:
-      - ./server/db:/var/lib/mysql
+      - ./server/data:/var/lib/postgresql/data
     environment:
-      - MYSQL_ROOT_PASSWORD=ROOT_PASSWORD
-      - MYSQL_DATABASE=test_db
-      - MYSQL_USER=test_user
-      - MYSQL_PASSWORD=test_password
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: test_db
     
   
 
