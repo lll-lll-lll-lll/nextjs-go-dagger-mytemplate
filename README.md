@@ -1,6 +1,17 @@
-## push and Github Actions succeed
+# Summary
+- client
+    - nextjs
+    - typescript
+    - jest
+- server
+    - go
+    - mux
+- db
+    - mysql
 
-
+- hosting
+    - client -> vercel
+    - server -> Azure Function
 
 ## dager CI
 ※ dagger already installed<br>
