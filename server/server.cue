@@ -5,7 +5,6 @@ import (
 
     "universe.dagger.io/docker"
     "universe.dagger.io/go"
-    "universe.dagger.io/netlify"
 )
 
 #GOBuild: docker.#Dockerfile  & {
