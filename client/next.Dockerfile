@@ -2,12 +2,11 @@
 FROM node:14.17.4-alpine
 ENV NODE_ENV=production
 WORKDIR /usr/src/app
-
-RUN apt-get -y update 
+RUN apk update
 
 
 COPY package*.json ./
-RUN yanr install  --production
+RUN yarn install  --production
 
 COPY . .
 CMD ["next", "start"]
