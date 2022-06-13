@@ -5,10 +5,10 @@ services:
     container_name: ec_client
     build:
       context: ./client
-      dockerfile: next.Dockerfile
+      dockerfile: Dockerfile
     tty: true
     volumes:
-      - ./:/usr/src/app 
+      - ./client:/client
     depends_on:
       - server
     ports:
@@ -27,12 +27,13 @@ services:
 
   db:
     container_name: ec_db
+    platform: linux/x86_64 
     image: mysql
     restart: always
     ports:
       - "13306:3306"
     volumes:
-      - ./db:/var/lib/mysql
+      - ./server/db:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=ROOT_PASSWORD
       - MYSQL_DATABASE=test_db
