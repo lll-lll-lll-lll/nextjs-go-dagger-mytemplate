@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# master
-=======
 # Summary
 - client
     - nextjs
@@ -40,4 +37,3 @@ dagger do build
 - .funcignore
 - local.settings.json
 - .gitignore
->>>>>>> main
