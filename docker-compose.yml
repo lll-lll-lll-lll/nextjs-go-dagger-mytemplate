@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  client:
+    container_name: ec_client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./client:/client
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+
+  server:
+    container_name: ec_server
+    build:
+      context: ./server
+      dockerfile: go.Dockerfile
+    volumes:
+      - ./server/:/go/src
+    tty: true
+    ports:
+      - 8080:8080
+
+  db:
+    container_name: ec_db
+    platform: linux/x86_64 
+    image: postgres:11-alpine
+    restart: always
+    ports:
+      - '5433:5432'
+    volumes:
+      - ./server/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: test_db
+    
+  
+

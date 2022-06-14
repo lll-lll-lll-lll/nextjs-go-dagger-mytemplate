@@ -1,0 +1,50 @@
+name: Client and Server Dagger CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+env:
+  NETLIFY_SERVER_SITE_NAME: ec_server
+
+jobs:
+  dagger-client-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Checkout 
+        uses: actions/checkout@v3
+      - 
+        name: Dagger CI Client
+        uses: dagger/dagger-for-github@v3.0.0
+        with:
+          workdir: ./client
+          cmds: |
+            project init
+            project update
+            do test
+            
+  dagger-server-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Checkout 
+        uses: actions/checkout@v3
+      - 
+        name: Dagger CI Server
+        uses: dagger/dagger-for-github@v3.0.0
+        with:
+          workdir: ./server
+          cmds: |
+            project init
+            project update
+            do test
+  
+  test-deploy:
+    needs: [dagger-client-ci, dagger-server-ci]
+    runs-on: ubuntu-latest
+    steps:
+      - name: test Deploy
+        run: echo Test Deploy
