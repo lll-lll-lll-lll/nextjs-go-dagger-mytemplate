@@ -9,30 +9,20 @@ import (
 )
 
 
-func remain(){
-	app := App{}
-	app.Initialize(
-		os.Getenv("APP_DB_USERNAME"),
-		os.Getenv("APP_DB_PASSWORD"),
-		os.Getenv("APP_DB_NAME"),
-	)
-	app.Run(":8080")
-}
-
 func main() {
 	log.Print("starting server...")
 	router := gin.Default()
-	router.GET("/", HelloWorld)
+	router.GET("/api/hello", HelloWorld)
 
 	// Determine port for HTTP service.
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "7071"
 		log.Printf("defaulting to port %s", port)
 	}
 
 	log.Printf("listening on port %s", port)
-	router.Run(":8080")
+	router.Run(":7071")
 }
 
 func HelloWorld(c *gin.Context) {
