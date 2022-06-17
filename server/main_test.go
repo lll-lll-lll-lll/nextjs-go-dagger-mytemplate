@@ -10,7 +10,6 @@ import (
 	"github.com/go-playground/assert/v2"
 )
 
-var app App
 
 func TestHello(t *testing.T) {
 	mockResponse := `{"message":"helloworld"}`
