@@ -12,6 +12,7 @@ jobs:
     uses: ./.github/workflows/common.yml
 
   deploy:
+    if: ${{ success() }}
     needs: [build_test_common_workflow]
     runs-on: ubuntu-latest
     steps:
