@@ -37,3 +37,8 @@ dagger do build
 - .funcignore
 - local.settings.json
 - .gitignore
+
+# Github Secretに設定
+- VERCEL_TOKEN
+- ORG_ID
+- PROJECT_ID
