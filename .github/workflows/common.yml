@@ -6,8 +6,6 @@ on:
     branches:
       - develop
 
-env:
-  NETLIFY_SERVER_SITE_NAME: ec_server
 
 jobs:
   dagger-client-ci:
