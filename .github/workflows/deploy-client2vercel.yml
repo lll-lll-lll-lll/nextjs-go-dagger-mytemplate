@@ -9,7 +9,7 @@ on:
 
 jobs:
   build_test_common_workflow:
-    - uses: ./.github/workflows/common.yml
+    uses: ./.github/workflows/common.yml
 
   deploy:
     needs: [build_test_common_workflow]
