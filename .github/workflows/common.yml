@@ -24,7 +24,6 @@ jobs:
             project init
             project update
             do test
-            do build
             
   dagger-server-ci:
     runs-on: ubuntu-latest
