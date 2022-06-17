@@ -7,13 +7,12 @@
     - go
     - mux
 - db
-    - mysql
-
+    - postgresql
 - hosting
     - client -> vercel
     - server -> Azure Function
 
-## dager CI
+## Dager Settings
 ※ dagger already installed<br>
 
 create cue.mod directory. initialize dagger settings. <br>
@@ -38,7 +37,7 @@ dagger do build
 - local.settings.json
 - .gitignore
 
-# Github Secretに設定
+# Github Secret Settings
 - VERCEL_TOKEN
 - ORG_ID
 - PROJECT_ID
