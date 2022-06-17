@@ -1,0 +1,35 @@
+name: Azure Function Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: branch|tag|SHA to checkout
+        default: master
+        require: true
+  push:
+    branches:
+      - master
+
+env:
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: ./server/hosting
+  AZURE_FUNCTIONAPP_NAME: sample-python-githubactions
+  PYTHON_VERSION: "3.9"
+
+jobs:
+  build_test_common_workflow:
+    - uses: ./.github/workflows/common.yml
+  deploy_from_base:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v2
+          with:
+            ref: ${{ github.event.inputs.ref }}
+      - name: Run Azure Functions Action
+        uses: Azure/functions-action@v1
+        id: fa
+        with:
+          app-name: $env.AZURE_FUNCTIONAPP_NAME
+          package: $env.AZURE_FUNCTIONAPP_PA CKAGE_PATH
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
