@@ -24,8 +24,8 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v2
-          with:
-            ref: ${{ github.event.inputs.ref }}
+        with:
+          ref: ${{ github.event.inputs.ref }}
       - name: Run Azure Functions Action
         uses: Azure/functions-action@v1
         id: fa
