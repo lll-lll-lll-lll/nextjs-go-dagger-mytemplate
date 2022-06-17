@@ -1,6 +1,4 @@
-:::note alert
-作成途中です
-:::
+<p class="alert">作成途中</p>
 
 # Summary
 - client
