@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: branch|tag|SHA to checkout
+        description: branch|tag|SHA to 
         default: master
         require: true
 
@@ -17,7 +17,8 @@ env:
 jobs:
   build_test_common_workflow:
     uses: ./.github/workflows/common.yml
-  deploy_from_base:
+  deploy:
+    needs: [build_test_common_workflow]
     runs-on: ubuntu-latest
     environment: production
     steps:
